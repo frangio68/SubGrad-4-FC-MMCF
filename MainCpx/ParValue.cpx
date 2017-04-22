@@ -1,0 +1,49 @@
+############################# File ParF.qp ##################################
+#                                                                           #
+# Antonio Frangioni and Enrico Gorgone                                      #
+#                                                                           #
+# No 0.01                                                                   #
+# 28/06/2012  		                                                        #
+# Version for: MMCF solved by Cplex                                         #
+#                                                                           #
+#############################################################################
+
+#  Main  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s     type = s*, c, p, o, d, u, m (lower or uppercase)
+
+#     add (strong/weak) design constraints if present: w / s / b / n
+#     w: weak , s: strong , b: weak and strong , n: no
+b     
+
+1     true if relax integrality is actived: 0 / 1
+0     livel of verbosity of MIP
+
+1e-4  relative tolerance 
+1     number of threads 
+
+#  MMCFCple  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#     options of algorithm: a = primal , b = dual , c = barrier ,
+#     d = barrier + crossover , e = primal network, f = dual network ,
+#     A = B&B (Primal Simplex) ,
+#     B = B&B (Dual Simplex) , C = B&B (Network Simplex) , 
+#     D = B&B (Barrier) , E = B&B (Sifting) ,
+#     F = B&B (Concurrent (Dual, Barrier, and Primal) ) ,
+#     G = B&B (Let CPLEX choose) )
+
+G     algorithm used
+
+0     true, if Populate is adopted
+0     true, if Lazy constraints is adopted
+
+10000 time limit
+
+1     CPX_PARAM_PREIND: 0 false, 1 (default) true 
+-1    CPX_PARAM_REPEATPRESOLVE: -1 	Automatic (default), 0 turn off, 1 .. 3 
+0     CPX_PARAM_PRESLVND: -1 No node presolve, 0 Automatic (default), 1..3   
+3     CPX_PARAM_REDUCE: 0 No , 1 primal red, 2 dual red, 3 Both primal and dual red (default) 
+
+########################### End File ParValue.cpx ############################

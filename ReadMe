@@ -1,0 +1,70 @@
+Brief software description:
+---------------------------
+
+The CNDSM Project is a C++ implementation of codes for solving non-smooth
+problems, and more in particular for solving the Flow and Knapsack Lagrangian
+dual of the multi-commodity capacitated network design (FC-MMCF) problem. The
+code consists of a (generic) subgradient-like method. The code is embedded
+into a generic interface for non-differentiable optimization codes, organized
+around two classes: NDOSolver for the solver and FiOracle for to the specific
+problem. The classe SubGrad derives from NDOSolver, and two problems derive
+form FiOracle: FlwFiOrcl and KnpsFiOrcl, respectively, the Flow and Knapsack
+Lagrangian relaxation of FC-MMCF problem. The instance is read by means of the
+service class Graph. To be able to compare Subgradient with some general
+propose LP solver a CPLEX implementation of the LP relaxation of FC-MMCF
+problem is provided in MMCFCplex.
+
+A doxygen manual is contained in the folder doc/html.
+
+Software Installation:
+----------------------
+
+Go in the corresponding Main (MainSg for Subgradient and MainCpx for CPLEX).
+Edit the makefile to see if any detail about the compiler and switches need
+be changed, then type "make". For CPLEX, edit extlib/makefile-libCPX to set
+the path to the CPLEC files.
+
+How to use the software:
+------------------------
+
+If one is interested in launching the program, a parameter file has to be
+prepared, or one might utilize the one provided in the MainXX directory. The
+parameter file has to be in the same directory of the executable file. The
+doxygen manualprovides a detailed description of the parameters. Note that
+the order of  the parameters in the parameter file is crucial because in
+Main.C the objects are created in a particular sequence. Note that you can
+specify the verbosity of the log file, changing the corresponding parameter
+as reported in the manual. There is, in fact, one or more parameters
+responsible of the verbosity of the log file. In the Subgradient there are
+two parameters relative to the verbosity, one for the solver and the other
+one for the oracle. In addition to those, there are two extra parameters, one
+for the Stepsize class and the other one for the Deflection class. Moreover,
+one might switch off the generation of the log file by putting to 0 the
+corresponding macro in the header file of each class.  
+
+The small test instance p33.dat is provided, with others available at
+
+    http://www.di.unipi.it/optimize/Data/MMCF.html
+
+To solve the instance p33:
+
+- SubGrad project (subgradient method):
+
+  Go to the folder MainSg. The main for the SubGrad Solver is here, type  
+
+     ./SgSolver ../p33.dat s -511953.987525988
+
+  The third parameter is a lower bound on the optimal value, which is
+  required for the SubGradient algorithm to run. The optimal values for
+  some of the instances above can be found in Instances.pdf, or computed
+  with CPLEX (see below).
+
+- MMCFCplex project (CPLEX solver):
+
+  Go to the folder MainCpx. The main for the MMCFCplex Solver is here, type  
+
+     ./CpxSolver ../p33.dat s
+
+More details on the Subgradient approach and its parameters can be found at
+
+     http://pages.di.unipi.it/frangio/abstracts.html#MPC16

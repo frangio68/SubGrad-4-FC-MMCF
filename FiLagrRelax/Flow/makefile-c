@@ -1,0 +1,60 @@
+##############################################################################
+################################# makefile ###################################
+##############################################################################
+#                                                                            #
+#   makefile of FlwFiOrcl                                                    #
+#   all modules are defined here                                             #
+#                                                                            #
+#   Input:  $(CC)     = compiler command                                     #
+#           $(SW)     = compiler options                                     #
+#           $(OPTH)   = the OPT****.h files to include		             #
+#           $(OPTINC) = the -I$(OPT****.h directory)		             #
+#           $(FIOH)      = the include files for FiOracle                    #
+#           $(NDOINC)    = the -I$(NDOSolver/FiOracle directories)           #
+#           $(MMFH)      = the MMCFClas.h file(s) to include                 #
+#           $(MMFINC)    = the -I$(MMCFClas directory)			     #
+#           $(MMGH)      = the Graph.h file(s) to include                    #
+#           $(MMGINC)    = the -I$(Graph directory)                          #
+#           $(FLWDIR) = the directory where the source is                    #
+#                                                                            #
+#   Output: $(FLWOBJ) = the final object file(s)                             #
+#           $(FLWLIB) = external libreries + -L<libdirs>                     #
+#           $(FLWH)   = the .h files to include                              #
+#           $(FLWINC) = the -I$(include directories)                         #
+#                                                                            #
+#                                VERSION 2.00                                #
+#                               16 - 05 - 2012                               #
+#                                                                            #
+#                              Antonio Frangioni                             #
+#                           Operations Research Group                        #
+#                          Dipartimento di Informatica                       #
+#                              Universita' di Pisa                           #
+#                                                                            #
+##############################################################################
+
+# define & include the necessary modules- - - - - - - - - - - - - - - - - - -
+# if a module is not used in the current configuration, just comment out the
+# corresponding include line
+# each module outputs some macros to be used here:
+# *LIB external libreries + -L<libdirs>
+# *OBJ the final object(s) / library
+# *H   is the list of all include files
+# *INC is the -I<include directories>
+
+# MMCFFlwB (the whole stuff)
+MFBDIR = $(FLWDIR)../../FlowBase/
+include $(MFBDIR)makefile
+
+# FlwFiOrcl (the makefile requiring all external modules in input)
+include $(FLWDIR)makefile
+
+# macroes to be exported- - - - - - - - - - - - - - - - - - - - - - - - - - -
+# append external libreries to FlwFiOrcl as defined in the makefile, thus
+# the := assignment has to be used (hope you have GNU make)
+
+FLWOBJ := $(FLWOBJ) $(MFBOBJ)
+FLWLIB := $(FLWLIB) $(MFBLIB)
+FLWH   := $(FLWH) $(MFBH)
+FLWINC := $(FLWINC) $(MFBINC)
+
+############################ End of makefile #################################

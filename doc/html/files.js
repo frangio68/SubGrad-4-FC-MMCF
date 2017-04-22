@@ -1,0 +1,28 @@
+var files =
+[
+    [ "ColorTV.h", "ColorTV_8h.html", "ColorTV_8h" ],
+    [ "CQKnPClass.h", "CQKnPClass_8h.html", "CQKnPClass_8h" ],
+    [ "Deflection.h", "Deflection_8h.html", null ],
+    [ "DualCQKnP.h", "DualCQKnP_8h.html", "DualCQKnP_8h" ],
+    [ "ExDualCQKnP.h", "ExDualCQKnP_8h.html", "ExDualCQKnP_8h" ],
+    [ "FiOracle.h", "FiOracle_8h.html", "FiOracle_8h" ],
+    [ "FlwFiOrcl.h", "FlwFiOrcl_8h.html", "FlwFiOrcl_8h" ],
+    [ "FumeroTV.h", "FumeroTV_8h.html", "FumeroTV_8h" ],
+    [ "Graph.h", "Graph_8h.html", "Graph_8h" ],
+    [ "KnpsFiOrcl.h", "KnpsFiOrcl_8h.html", "KnpsFiOrcl_8h" ],
+    [ "MainPage.h", "MainPage_8h.html", null ],
+    [ "MCFClass.h", "MCFClass_8h.html", "MCFClass_8h" ],
+    [ "MCFCplex.h", "MCFCplex_8h.html", "MCFCplex_8h" ],
+    [ "MCFSimplex.h", "MCFSimplex_8h.html", "MCFSimplex_8h" ],
+    [ "MMCFClas.h", "MMCFClas_8h.html", "MMCFClas_8h" ],
+    [ "MMCFCple.h", "MMCFCple_8h.html", "MMCFCple_8h" ],
+    [ "MMCFFlwB.h", "MMCFFlwB_8h.html", "MMCFFlwB_8h" ],
+    [ "NDOSlver.h", "NDOSlver_8h.html", "NDOSlver_8h" ],
+    [ "Polyak.h", "Polyak_8h.html", "Polyak_8h" ],
+    [ "PrimalDual.h", "PrimalDual_8h.html", "PrimalDual_8h" ],
+    [ "SPTree.h", "SPTree_8h.html", "SPTree_8h" ],
+    [ "Stepsize/Stepsize.h", "Stepsize_2Stepsize_8h.html", null ],
+    [ "Stepsize.h", "Stepsize_8h.html", null ],
+    [ "SubGrad.h", "SubGrad_8h.html", "SubGrad_8h" ],
+    [ "Volume.h", "Volume_8h.html", "Volume_8h" ]
+];

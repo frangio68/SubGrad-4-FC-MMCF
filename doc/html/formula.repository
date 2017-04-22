@@ -1,0 +1,116 @@
+\form#0:$\in R_+$
+\form#1:$\in R \cup$
+\form#2:\[ \min \sum_{i \in E} C[ i ] * X[ i ] + D[ i ] * X[ i ]^2 \]
+\form#3:\[ \sum_{i \in E} X[ i ] \leq V ( = V ) \]
+\form#4:\[ A[ i ] \leq X[ i ] \leq B[ i ] \hspace{1cm} i \in E \]
+\form#5:\[ \phi( \alpha , \beta ) = \min \left\{ \sum_{k \in K} \sum_{(i, j) \in A} \left( c_{ij}^k + \alpha_{ij} + \beta_{ij}^k \right)x_{ij}^k + \left( f_{ij} - \alpha_{ij} u_{ij} - \sum_{k \in K} \beta_{ij}^k u_{ij}^k \right) y_{ij} \right\} \]
+\form#6:\[ \sum_{(i, j) \in A} x_{ij}^k - \sum_{(j,i) \in A} x_{ij}^k = b_i^k \quad,\quad i \in N , k \in K \]
+\form#7:\[ 0 \leq x_{ij}^k \leq u_{ij}^k \quad,\quad (i, j) \in A , k \in K \]
+\form#8:\[ y_{ij} \in \{0, 1\} \quad,\quad (i, j) \in A \]
+\form#9:$( \alpha, \beta )$
+\form#10:$\alpha$
+\form#11:$\beta$
+\form#12:\[ gi^k(\alpha_{ij})=gi^k(\beta_{ij}^k)=x_{ij}^k ,\forall\: subproblem\: k \]
+\form#13:\[ gi^0(\alpha_{i,j})=-u_{ij}y_{ij}\]
+\form#14:\[ gi^0(\beta_{i,j}^k)=b_{ij}^ky_{ij}\]
+\form#15:\[ gi(\alpha_{i,j})=\left(sum_{k \in K}x_{ij}^k-u_{ij}y_{ij}\right) \]
+\form#16:\[ gi(\beta_{i,j}^k)=x_{ij}^k-b_{ij}^ky_{ij}\]
+\form#17:\[ \phi(\upsilon)= \min \sum_{k \in K} \sum_{(i,j) \in A} \left( c_{ij}^k + \upsilon_i^k - \upsilon_j^k \right) x_{ij}^k + \sum_{(i,j) \in A} f_{ij}y_{ij} - \sum_{n \in N} \sum_{k \in K} \left( \upsilon_i^k - b_i^k \right) \]
+\form#18:\[ \sum_{k \in K} x_{ij}^k \leq u_{ij} y_{ij} \quad,\quad (i,j) \in A \]
+\form#19:\[ 0 \leq x_{ij}^k \leq u_{ij}^k y_{ij} \quad,\quad (i,j) \in A, k \in K \]
+\form#20:\[ y_{ij} \in \{0,1\} \quad,\quad (i,j) \in A \]
+\form#21:$\upsilon$
+\form#22:\[ gi(\upsilon_i^k) = \sum_{(i,j) \in A} \left( x_{ij}^k - \sum_{(j,i)\in A}x_{ji}^k \right) - b_i^k \]
+\form#23:$ d_i $
+\form#24:\[ d_i = ( \sum_{k=1}^i \upsilon_k g_k) / \Delta_i \quad,\quad \Delta_i = \sum_{k=1}^i \upsilon_k \]
+\form#25:$\upsilon_k $
+\form#26:$k\rightarrow \infty$
+\form#27:\[ \alpha_i = \upsilon_i / \Delta_i \quad,\quad \nu_i = \Delta_i / \omega_i \]
+\form#28:$\omega_i$
+\form#29:$ g_i $
+\form#30:$ d_{i-1} $
+\form#31:$ \sigma_i $
+\form#32:$ \epsilon_{i-1} $
+\form#33:$ \bar{\lambda}_i$
+\form#34:\[ \tau_i = \arg\min \left\{ \; \nu_{i-1} \left\| \tau g_i + (1 - \tau) d_{i-1} \right\|^2/2 + \tau \sigma_i(\bar{\lambda}_i) + (1 - \tau)\epsilon_{i-1}(\bar{\lambda}_i) \;:\; \tau \in [0, 1]\; \right\} \]
+\form#35:$ \tau_0 $
+\form#36:$ \tau:~ \tau_{\min}$
+\form#37:$ \tau_{f} $
+\form#38:$ \alpha_i $
+\form#39:\[ d_i = \alpha_i g_i + (1-\alpha_i)d_{i-1}\;. \]
+\form#40:$ \alpha_i = 1 $
+\form#41:$ f $
+\form#42:$\nu_i$
+\form#43:$ g_i^{\top} d_i $
+\form#44:$ \epsilon_i $
+\form#45:$ f(\lambda_i) $
+\form#46:$ f^{lev} $
+\form#47:$ f^{rec} $
+\form#48:$ \beta_i $
+\form#49:$ sigma_r $
+\form#50:$ \sigma(r) $
+\form#51:$\beta_i$
+\form#52:$f^{lev}_i$
+\form#53:$ f^{lev}_i $
+\form#54:$ d_{i-1}^{\top} g_i$
+\form#55:\[ \nu_i = \beta_i ( \, f_i - f^{lev}_i \, ) / \|d_i\|^2 . \]
+\form#56:$\alpha_i$
+\form#57:$ g_i^{\top} d_i$
+\form#58:$ g_i^{\top} d_{i-1}$
+\form#59:$d_i$
+\form#60:\[ \breve{\lambda}_{i+1} \gets \bar{\lambda}_i - \nu_i d_i \quad , \quad \lambda_{i+1} \gets {\rm P}_{\Lambda}( \, \breve{\lambda}_{i+1} \, ) \]
+\form#61:${\rm P}$
+\form#62:$\bar{\Lambda}$
+\form#63:$\bar{\lambda}_i$
+\form#64:$\bar{\lambda}_{i}$
+\form#65:$ d_i = \alpha_i g_i + (1-\alpha_i)d_{i-1} $
+\form#66:$\alpha_i = 1$
+\form#67:$g_i$
+\form#68:$d_{i-1}$
+\form#69:\[ d_i = \alpha_i g_i + ( 1 - \alpha_i ) d_{i-1} \]
+\form#70:$\{d_i,d_{i-1},g_i\} $
+\form#71:$d_{i}$
+\form#72:$f$
+\form#73:\[ \hat{\lambda}_{i+1} = \alpha_{i+1}\lambda_i + ( 1 - \alpha_{i+1} ) \hat{\lambda}_i \]
+\form#74:$ \alpha_i$
+\form#75:$ \nu_i \leq 1e-8 * t^*$
+\form#76:$ t^* $
+\form#77:$1e-8$
+\form#78:$\epsilon$
+\form#79:$\hat{f}$
+\form#80:$ \hat{\lambda}_i $
+\form#81:$\epsilon $
+\form#82:\[ t^* \|d_i\| + \max\{ \hat{\epsilon}_i , \epsilon_i \} <= \epsilon * max( 1 , |f_i^{rec}| ) \]
+\form#83:\[ t^* \|d_i\| + \epsilon_i <= \epsilon * max( 1 , |f_i^{rec}| ) \]
+\form#84:$ f^{rec}_i = \min \{ \, f_l \,:\, l = 1, \ldots, i \, \}$
+\form#85:$\lambda_{i+1}$
+\form#86:$f(\lambda_{i+1})$
+\form#87:$g_{i+1} \in \partial f(\lambda_{i+1})$
+\form#88:$\breve{\lambda}_{i+1}$
+\form#89:\[ \breve{\lambda}_{i+1} = \lambda_i - \nu_i d_i \,. \]
+\form#90:$ \lambda_{i+1} = {\rm P}_{\Lambda} ( \breve{\lambda}_{i+1} ) $
+\form#91:$ \lambda_i $
+\form#92:$ \lambda_{i+1} $
+\form#93:$ \nu_i $
+\form#94:$ \sigma_i$
+\form#95:$ g_i$
+\form#96:$\epsilon_i$
+\form#97:$ \hat{\alpha}_i $
+\form#98:$\hat{\lambda}_i$
+\form#99:$ \hat{\epsilon}_i $
+\form#100:$d_{i-1}^{\top} g_i$
+\form#101:\[ \min \sum_{ (i, j) \in A } C[ i , j ] X[ i, j ] + Q[ i , j ] X[ i, j ]^2 / 2 \]
+\form#102:\[ (1) \sum_{ (j, i) \in A } X[ j , i ] - \sum_{ (i, j) \in A } X[ i , j ] = b[ i ] \hspace{1cm} i \in N \]
+\form#103:\[ (2) 0 \leq X[ i , j ] \leq U[ i , j ] \hspace{1cm} (i, j) \in A \]
+\form#104:$\sum_{ i \in N } b[ i ] = 0$
+\form#105:\[ \max \sum_{ i \in N } Pi[ i ] b[ i ] - \sum_{ (i, j) \in A } W[ i , j ] U[ i , j ] - \sum_{ (i, j) \in AQ } V[ i , j ]^2 / ( 2 * Q[ i , j ] ) \]
+\form#106:\[ (3.a) C[ i , j ] - Pi[ j ] + Pi[ i ] + W[ i , j ] - Z[ i , j ] = 0 \hspace{1cm} (i, j) \in AL \]
+\form#107:\[ (3.b) C[ i , j ] - Pi[ j ] + Pi[ i ] + W[ i , j ] - Z[ i , j ] = V[ i , j ] \hspace{1cm} (i, j) \in AQ \]
+\form#108:\[ (4.a) W[ i , j ] \geq 0 \hspace{1cm} (i, j) \in A \]
+\form#109:\[ (4.b) Z[ i , j ] \geq 0 \hspace{1cm} (i, j) \in A \]
+\form#110:\[ RC[ i , j ] = C[ i , j ] + Q[ i , j ] * X[ i , j ] - Pi[ j ] + Pi[ i ] \]
+\form#111:\[ RC[ i , j ] > 0 \Rightarrow X[ i , j ] = 0 \]
+\form#112:\[ RC[ i , j ] < 0 \Rightarrow X[ i , j ] = U[ i , j ] \]
+\form#113:$\sum_{ (i, j) \in A } C_{i,j}( X[ i, j ] )$
+\form#114:\[ RC[ i , j ] < - eps \Rightarrow X[ i , j ] = U[ ij ] \]
+\form#115:\[ RC[ i , j ] > eps \Rightarrow X[ i , j ] == 0 , \]

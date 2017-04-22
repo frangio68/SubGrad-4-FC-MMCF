@@ -1,0 +1,100 @@
+############################# File ParF.sg ##################################
+#                                                                           #
+# Antonio Frangioni and Enrico Gorgone                                      #
+#                                                                           #
+# No 0.01                                                                   #
+# 22/10/2015   		                                                        #
+# Version for: Fi = FlowFiOracle, NDOSolver = SubGrad                       #
+#############################################################################
+
+# parameters of Main - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+0     percentage for the lower bound
+0     verbosity of the Stepsize log
+0     verbosity of the Volume log
+0     verbosity of the SubGrad log
+0     verbosity of the FiOracle log
+
+# parameters of FlowFiOracle- - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1     SPar1
+0     SPar2
+0     SPar3
+b     SPar4
+
+0     1 if easy components are used, 0 otherwise
+1     1 if the function is considered as one function, 0 if decomposed 
+
+0     not used
+
+1e-8  precision for the design part
+1e-6  precision for the constraints 
+
+# parameters of SubGrad - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# parameters of NDOSolver - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+100       max number of iterations for each call to Solve()
+10000   max time limit (in seconds) for each call to Solve()
+
+1e1     tStar: stopping parameter
+1e-4    EpsLin: stopping parameter
+
+1e-6    initial (minimal) precision required to the FiOracle
+1e-6    final (maximal) precision required to the FiOracle
+
+0.95    the precision is multiplied by <this> ...
+0    ... every <this> steps (0 = fixed precision)
+
+# parameters of SubGrad - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+0      SPar1: projection-strategy (0 - 7)
+0      SPar2: incremental factor
+2      SPar3: convergence scheme (0 - 3)
+1      SPar4: 1 if LambdaHat is kept
+0      SPar5: seed for the random generation 
+
+# parameters of Deflection - - - - - - - - - - - - - - - - - - - - - - - - -
+#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# parameters of SWAverages   - - - - - - - - - - - - - - - - - - - - - - - -
+
+1     1 if simple averages, 0 if weighted averages
+1e2   factor 
+
+# parameters of StdVolume -  - - - - - - - - - - - - - - - - - - - - - - - -
+
+#1     initial alpha
+#1e-4  alphamin
+#0.8   alphafactor
+#100   alphaint
+#0.1   m
+
+# parameters of Stepsize    - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#1e-2   Lipschitz factor
+
+# parameters of ColorTV     - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#1     beta0
+#1     green
+#50    yellow
+#50    red
+
+# parameters of Fumero  - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#.001   threshold for sigma_r
+#100    r1  s.t. sigma(r1) = 1/2 )
+#1      beta0
+#100    max number of failures (phase I)
+#50     max number of failures (phase II)
+
+# parameters of Polyak  - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#1     beta
+
+########################### End File ParF.sg #################################

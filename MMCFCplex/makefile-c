@@ -1,0 +1,50 @@
+##############################################################################
+#									     #
+#   makefile of MMCFCple       						     #
+#   all modules are defined here                                             #
+#									     #
+#   Input:  $(CC)     = compiler command				     #
+#           $(SW)     = compiler options                                     #
+#           $(OPTH)      = the OPT****.h files to include		     #
+#           $(OPTINC)    = the -I$(OPT****.h directory)			     #
+#           $(MMXDIR) = the directory where the source is                    #
+#									     #
+#   Output: $(MMXLIB) = the final object file(s)			     #
+#           $(MMXH)   = the .h files to include				     #
+#           $(MMXINC) = the -I$(MMCFCple directory)			     #
+#									     #
+#                                VERSION 2.00				     #
+#                	        16 - 05 - 2012				     #
+#									     #
+#			      Antonio Frangioni				     #
+#   			   Operations Research Group			     #
+#			  Dipartimento di Informatica			     #
+#   			     Universita' di Pisa			     #
+#									     #
+##############################################################################
+
+# define & include the necessary modules- - - - - - - - - - - - - - - - - - -
+# if a module is not used in the current configuration, just comment out the
+# corresponding include line
+# each module outputs some macros to be used here:
+# *LIB external libreries + -L<libdirs>
+# *OBJ the final object(s) / library
+# *H   is the list of all include files
+# *INC is the -I<include directories>
+
+# cplex external libreries
+include $(MMXDIR)../extlib/makefile-libCPX
+
+# MMCFCplex (the makefile requiring all external modules in input)
+include $(MMXDIR)makefile
+
+# macroes to be exported- - - - - - - - - - - - - - - - - - - - - - - - - - -
+# append external libreries to CQKnPCplex as defined in the makefile, thus
+# the := assignment has to be used (hope you have GNU make)
+
+MMXOBJ := $(MMXOBJ)
+MMXLIB := $(MMXLIB) $(libCPXLIB)
+MMXH   := $(MMXH)
+MMXINC := $(MMXINC) $(libCPXINC)
+
+############################ End of makefile #################################
