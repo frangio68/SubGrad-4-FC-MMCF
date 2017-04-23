@@ -68,3 +68,8 @@ To solve the instance p33:
 More details on the Subgradient approach and its parameters can be found at
 
      http://pages.di.unipi.it/frangio/abstracts.html#MPC16
+     
+The solver of Convex Quadratic (Continuous, Separable) Knapsack problems used
+by the SubGrad algorithm is taken by
+
+    https://github.com/frangio68/Convex-Quadratic-Knapsack
