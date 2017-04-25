@@ -14,7 +14,9 @@ service class Graph. To be able to compare Subgradient with some general
 propose LP solver a CPLEX implementation of the LP relaxation of FC-MMCF
 problem is provided in MMCFCplex.
 
-A doxygen manual is contained in the folder doc/html.
+A doxygen manual is docs and available at
+
+  https://frangio68.github.io/SubGrad-4-FC-MMCF
 
 Software Installation:
 ----------------------
