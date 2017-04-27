@@ -14,7 +14,7 @@ service class Graph. To be able to compare Subgradient with some general
 propose LP solver a CPLEX implementation of the LP relaxation of FC-MMCF
 problem is provided in MMCFCplex.
 
-A doxygen manual is docs and available at
+A doxygen manual is available in docs/ and at
 
   https://frangio68.github.io/SubGrad-4-FC-MMCF
 
@@ -69,9 +69,14 @@ To solve the instance p33:
 
 More details on the Subgradient approach and its parameters can be found at
 
-     http://pages.di.unipi.it/frangio/abstracts.html#MPC16
+    http://pages.di.unipi.it/frangio/abstracts.html#MPC16
      
 The solver of Convex Quadratic (Continuous, Separable) Knapsack problems used
-by the SubGrad algorithm is taken by
+by the SubGrad algorithm is taken by the CQKnP Project
 
     https://github.com/frangio68/Convex-Quadratic-Knapsack
+
+The solvers of Min-Cost Flow problems used to compute the Flow Relaxation are
+taken by the MCFClass Project
+
+    https://github.com/frangio68/Min-Cost-Flow-Class
